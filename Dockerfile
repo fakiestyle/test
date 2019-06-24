@@ -1,5 +1,5 @@
 FROM centos:7
-RUN yum update -y && yum install -y httpd
+RUN yum install -y httpd
 ARG apath=/var/www/html
 COPY .idea $apath/.idea
 COPY dev $apath/dev
