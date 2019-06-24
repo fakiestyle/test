@@ -1,10 +1,5 @@
 FROM centos:7
 RUN yum update -y && yum install -y httpd
-
-ADD https://get.aquasec.com/microscanner /
-RUN chmod +x /microscanner
-RUN /microscanner N2NjMDc4ZTIwNzJh --continue-on-failure
-
 ARG apath=/var/www/html
 COPY .idea $apath/.idea
 COPY dev $apath/dev
